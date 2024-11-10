@@ -1,8 +1,12 @@
-\documentclass[a4paper,11pt]{article}
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
 
-% Font specification
-\usepackage{fontspec}
-\setmainfont{Clear Sans}
+\documentclass[letterpaper,11pt]{article}
+
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
@@ -10,321 +14,197 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{fancyhdr}
-\usepackage{multibib}
-\usepackage{etoolbox}
-\usepackage{hyperref}
-\usepackage{xcolor}
-\usepackage{ulem}
-\usepackage{xcolor}
-\usepackage{hyperref}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=blue,
-    filecolor=magenta,      
-    urlcolor=blue,
-}
-\newcommand{\myhref}[2]{\href{#1}{\textbf{#2}}}
-\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
 
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-\setlength{\footskip}{4.08003pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
-\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-\urlstyle{rm}
+\urlstyle{same}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-
 \titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large\bfseries\color{black}\fontsize{12}{15}\selectfont
-}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
 % Custom commands
-\renewcommand{\labelitemii}{$\circ$}
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
 
-%-----------------------------
-%%%%%%  CV STARTS HERE  %%%%%%
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \begin{document}
 
-%----------HEADING-----------------
+%----------HEADING----------
 
 \begin{center}
-    {\Large\bfseries JEREMY FRIESEN}
+    \textbf{\Huge \scshape Jeremy Friesen} \\ \vspace{5pt}
+    \small +1 (343) 575-8441 $|$ 
+    \href{mailto:jeremyfriesen@cmail.carleton.ca}{\textcolor{blue}{\underline{jeremyfriesen@cmail.carleton.ca}}} $|$ 
+    LinkedIn: \href{https://linkedin.com/in/jeremyfriesen1}{\textcolor{blue}{\underline{jeremyfriesen1}}} $|$ 
+    GitHub: \href{https://github.com/JeremyFriesenGitHub}{\textcolor{blue}{\underline{JeremyFriesenGitHub}}}
 \end{center}
 
-\begin{center}
-    \begin{tabular}{c}
-        Phone: +1 (343)-575-8441 \\
-        Email: \href{mailto:jeremyfriesen@cmail.carleton.ca}{\textcolor{blue}{\uline{jeremyfriesen@cmail.carleton.ca}}} \\
-        LinkedIn: \href{https://www.linkedin.com/in/jeremyfriesen1/}{\textcolor{blue}{\uline{JeremyFriesen1}}} \\
-        GitHub: \href{https://github.com/JeremyFriesenGitHub}{\textcolor{blue}{\uline{JeremyFriesenGitHub}}}
-    \end{tabular}
-\end{center}
 
-%-----------EDUCATION-----------------
-\section{EDUCATION}
- \begin{minipage}{\linewidth}
-    \textbf{Bachelor of Computer Science, Artificial Intelligence and Machine Learning Stream Honours}
-\end{minipage}
-    \begin{minipage}{.65\linewidth}
-    \begin{flushleft}
-        Carleton University, Ottawa, ON
-    \end{flushleft}
-\end{minipage}
-\hfill
-\begin{minipage}{.30\linewidth}
-    \begin{flushright}
-        September 2022 - Present
-    \end{flushright}
-\end{minipage}
-\begin{itemize}
-    \item Third year standing, CGPA 10.11/12 (letter grade of B+) 
-    \item Major CGPA 10.22/12 (letter grade of B+)
-    \item Honorary member of the Dean’s honour list for academic excellence for 2022-2023
-    \item Awarded the Harry S. Southam in-course scholarship valued at 2,000\$ for 2022-2024 
-    \item Expected Graduation Date: May 2027 
-\end{itemize}
 
-%-----------AVAILABILITY-----------------	    
-\vspace{2pt}
-\section{AVAILABILITY}
-	Available for 4 or 8 months beginning January 2025\\
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carleton University}{Ottawa, ON}
+      {Bachelor of Computer Science, Honours - Co-op option}{Sept. 2022  -- May 2027}
+    \resumeItemListStart
+        \resumeItem{Artificial Intelligence and Machine Learning Stream}
+        \resumeItem{GPA 3.59/4 (letter grade of B+)}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
-%-----------EXPERIENCE-----------------
-\vspace{2pt}
-\section{WORK EXPERIENCE}
-\begin{minipage}{.65\linewidth}
-    \textbf{Data Scientist for Complex Systems} 
-\end{minipage}
-\begin{minipage}{.34\linewidth}
-    \flushright
-    May 2024 - August 2024
-\end{minipage}
-\begin{minipage}{.65\linewidth}
-National Research Council of Canada, Ottawa, ON
-\end{minipage}
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
+%-----------AVAILABILITY-----------
+\section{Availability}
+ \resumeSubHeadingListStart
+    \item Available for 4 months beginning May 2025
+  \resumeSubHeadingListEnd
 
-    \item Worked in the \textbf{Artificial Intelligence for Logistics} Program and \textbf{Digital Technologies} and Research Centre, focusing on transportation and warehousing, infrastructure and goods condition, and AI-powered modeling
 
-    \item Conducted thorough analysis of sensor and historical datasets, comprising geospatial, tabular and specification data files, providing insightful input and clarity among file structures
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+  
+%-----------PSC-----------
+    \resumeSubheading
+      {Science and Research Assistant}{Jan. 2025 -- April 2025}
+      {Public Safety Canada}{Ottawa, ON}
+      \resumeItemListStart
     
-    \item Leveraged \textbf{Python} libraries (\textbf{GeoPandas}, \textbf{Pandas}, \textbf{Matplotlib}, \textbf{NumPy}, \textbf{Seaborn}, and more) to create comprehensive annotations, visualizations, optimizations, and trend analyses, demonstrating strong technical and critical thinking capabilities
-    
-    \item Demonstrated strong interpersonal skills by effectively communicating and presenting comprehensive data analyses to team members and supervisors
-    
-  \end{itemize}
-  \end{minipage}
+  \resumeItem{Starting new position for Winter 2025 Co-op}
+       
+      \resumeItemListEnd
 
-% %-----------SKILLS SECTION-----------------
-% \vspace{2pt}
-% \section{RELEVANT SKILLS, EXPERIENCES AND ACCOMPLISHMENTS }
-% 	\begin{minipage}{\linewidth}
-%     \textbf{Technical Skills}
-%     \begin{itemize}
-%     \item Developed a single-page weather app using \textbf{Express}, \textbf{SQLite}, \textbf{JavaScript} and \textbf{PUG}, demonstrating full-stack development and integration skills
-%     \item Created an A.I. model for predicting snow days using \textbf{Python} libraries, showcasing problem-solving and analytical abilities
-%     \item Proficient in \textbf{Python}, \textbf{Java}, \textbf{JavaScript}, \textbf{HTML}, and \textbf{SQL} commands, with practical experience in \textbf{C} and \textbf{Git} version control, applied in various projects
-%     \item Able to successfully navigate across Microsoft and Linux operating systems, demonstrating technical adaptability and proficiency in different systems 
-% \end{itemize}
-% \end{minipage}
-% %add space here please
-% \vspace{5pt}
-
-% \begin{minipage}{\linewidth}
-%     \textbf{Communication Skills}
-%     \begin{itemize}
-%     \item Led a team project in \textbf{C} programming language, enhancing group coordination and effective communication
-%     \item Bilingual in French and English, with conversational skills in Spanish, enabling clear and diverse communication
-%     \item Successfully presented a hackathon project to a panel, securing 3rd prize, highlighting public speaking and persuasion skills 
-% \end{itemize}
-% \end{minipage}
-
-%-----------PROJECTS-----------------
-\vspace{2pt}
-\section{APPLIED PROJECTS}
-\begin{minipage}{.65\linewidth}
-    \href{https://github.com/JeremyFriesenGitHub/A.I.-Snow-Day-Predictor}{\textcolor{blue}{\uline{Ottawa Snow Day Predictor (using Random Forest A.I. model)}}} 
-\end{minipage}
-\hfill
-\begin{minipage}{.34\linewidth}
-    \flushright
-    October 2023 - January 2024
-\end{minipage}
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
-    \item Used \textbf{CSV} historical data from Greater Ottawa Region to create and train a random forest classifier that can help predict future school closures for snowstorms (or snow days)
-    \item Developed an \textbf{HTML} website with an \textbf{SQLite} database and server with admin capabilities to help store previous data and predictions, showcasing technical expertise
-     \item Implemented \textbf{Flask API} to integrate the trained \textbf{Random Forest A.I. model} and deployed app using \textbf{Docker Compose}, showcasing multifaceted approach
-  \end{itemize}
-\end{minipage}
-
-\begin{minipage}{.65\linewidth}
-     \href{https://github.com/JeremyFriesenGitHub/Multi-threaded-Ghost-Hunter-Simulation}{\textcolor{blue}{\uline{Multi-threaded Ghost Hunter Simulation}}}
- \end{minipage}
- \hfill % This will add horizontal space between the two minipages
- \begin{minipage}{.34\linewidth}
-     \flushright
-     November - December 2023
- \end{minipage}
- \begin{minipage}{\linewidth}
- \vspace{10pt}
- \begin{itemize}
-     \item Developed in a team as a pair programmer, where threads can navigate and concurrently interact with each other using linked list structures, enhancing teamwork and technical skills
-     \item Implemented in \textbf{C}, using \textbf{pthreads} showcasing a deep understanding of concurrent programming, thread synchronization, and memory management in a low-level programming context.
-     \item Coordinated version control for project using \textbf{Git} and \textbf{GitHub}, utilizing written and verbal communication skills 
-      \end{itemize}
-        \vspace{1pt}
- \end{minipage}
-\begin{minipage}{.65\linewidth}
-\href{https://github.com/JeremyFriesenGitHub/Weather-App-and-Snow-day-Project}{\textcolor{blue}{\uline{Current Weather and Snow Day Predictor}}}                
-\end{minipage}
-\hfill
-\begin{minipage}{.34\linewidth}
-    \flushright
-    October - December 2023
-\end{minipage}
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
-    \item Developed a single-page weather application using an external \textbf{API}, coupled with \textbf{HTML} pages rendered using \textbf{PUG} and \textbf{CSS} which includes an \textbf{SQLite} database and an \textbf{Express} server demonstrating technical versatility and problem-solving abilities
-    \item Containerized the application using \textbf{Docker}, illustrating thought towards user deployment and experience
-    \item Created the \textbf{SQLite} database to store users (guest or admin) and to record feedback provided by guest users, showing proficiency in database management and attention to user engagement
-  \end{itemize}
-  \vspace{1pt}
-\end{minipage}
-
-\begin{minipage}{.65\linewidth}
-\href{https://github.com/JeremyFriesenGitHub/Statsbomb_DBMS}{\textcolor{blue}{\uline{Statsbomb DBMS}}}                
-\end{minipage}
-\hfill
-\begin{minipage}{.34\linewidth}
-    \flushright
-    March - April 2024
-\end{minipage}
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
-    \item Developed a Database Management System in \textbf{PostgreSQL} for the Open-Source Statsbomb repository to store and query historical \textbf{JSON} football data, utilizing \textbf{Normalization Theory} techniques, \textbf{Entity-Relationship} diagrams and \textbf{Schema} diagrams to correctly store all attributes across tables
-    \item Developed loaders in \textbf{Python} using the \textbf{Psycopg} library to efficiently load \textbf{JSON} data into the \textbf{PostgreSQL} Database and created efficient \textbf{SQL} queries, demonstrating strong technical knowledge
-  \end{itemize}
-\end{minipage}
+%-----------RMCP-----------
+    \resumeSubheading
+      {Level 1 Analyst}{Sept. 2024 -- Dec. 2024}
+      {Royal Canadian Mounted Police}{Ottawa, ON}
+      \resumeItemListStart
+       \resumeItem{Worked as an IT-01 \textbf{Technical Analyst} for the RCMP's \textbf{Central Help Desk} as a first point of contact for technical problems and requests through the call center phone system as well as the self-service ticketing system}
+       \resumeItem{Provided first level support for \textbf{200+ applications}}
+       \resumeItem{Used \textbf{troubleshooting} methodology in order to better understand the issues at hand}
+       \resumeItemListEnd
+%-----------NRC-----------
+    \resumeSubheading
+      {Data Scientist for Complex Systems}{May 2024 -- Aug. 2024}
+      {National Research Council of Canada}{Ottawa, ON}
+      \resumeItemListStart
+         \resumeItem{Contributed to the \textbf{AI for Logistics Program} and \textbf{Digital Technologies Research Centre}, with emphasis on transportation, warehousing, infrastructure, and AI-driven modeling}
+    \resumeItem{Analyzed complex sensor and historical datasets (geospatial, tabular, specification) to streamline data clarity and structure}
+    \resumeItem{Utilized \textbf{Python} libraries (\textbf{GeoPandas}, \textbf{Folium}, \textbf{Pandas}, \textbf{Matplotlib}, \textbf{NumPy}, \textbf{Seaborn}) for annotations, visualizations, optimizations, and trend analyses}
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
 
 
-%-----------EXTRA-----------------
-\vspace{2pt}
-\section{EXTRA-CURRICULAR ACTIVITIES AND CERTIFICATIONS}
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+      {\textbf{cuHacking} $|$ \emph{Internal Developper and Organizer}}{Aug.  2024 -- Present}
+          \resumeItemListStart
+           \resumeItem{Designed backend architecture for user profiles using \textbf{Postgres} with \textbf{Drizzle ORM} and created ER diagrams with \textbf{Mermaid charts}}
+          \resumeItem{Created pages for the documentation site using \textbf{Fumadocs} and \textbf{MDX}, enhancing project organization and showcasing guidelines, standards, and knowledge base for the organization}
+          \resumeItem{Wrote end-to-end tests for the docs site with \textbf{Playwright} and \textbf{Jest}, demonstrating strong testing skills}
+          \resumeItem{Integrated an \textbf{AI-powered pull request reviewer} to streamline team PR reviews, supporting the internal development workflow}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Statsbomb DBMS} $|$ \emph{Python, PostgreSQL, Psycopg, JSON, Git}}{March 2024 -- April 2024}
+          \resumeItemListStart
+            \resumeItem{Developed a Database Management System in \textbf{PostgreSQL} for the Open-Source Statsbomb repository to store and query historical \textbf{JSON} soccer data, utilizing Normalization Theory techniques, ER diagrams and Schema diagrams to correctly store all attributes across tables}
+            \resumeItem{Developed loaders in \textbf{Python} using the \textbf{Psycopg} library to efficiently load \textbf{JSON} data into the \textbf{PostgreSQL} Database and created efficient \textbf{SQL} queries, demonstrating strong technical knowledge}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
 
-\begin{minipage}{.65\linewidth}
-   \textbf{Security Clearances} 
-\end{minipage}
 
-\begin{minipage}[t]{.65\linewidth}
-    NRC Reliability Status
-\end{minipage}%
-\begin{minipage}[t]{.34\linewidth}
-    \flushright
-    April 3\textsuperscript{rd}, 2024 - April 3\textsuperscript{rd}, 2034
-\end{minipage}
 
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
-    \item Received Reliability Status with NRC valid until 2034
-\end{itemize}
-\vspace{1pt}
-\end{minipage}
-
- \begin{minipage}{.65\linewidth}
-   \textbf{Hackathons} 
-\end{minipage}
- \begin{minipage}{.65\linewidth}
-    \href{https://github.com/JeremyFriesenGitHub/InnovateNow}{\textcolor{blue}{\uline{InnovateNow!}}}
-\end{minipage}
-\begin{minipage}{.34\linewidth}
-    \flushright
-    October 2\textsuperscript{nd} - October 3\textsuperscript{rd}, 2023
-\end{minipage}
-\begin{minipage}{\linewidth}
-\vspace{10pt}
-\begin{itemize}
-    \item Demonstrated capable technical and communication skills by placing 3\textsuperscript{rd} at InnovateNow! team competition
-    \item Collaborated with team members to appropriately develop and pitch a successful project idea to panel following guidelines and regulations to competition, showing attention to detail
-\end{itemize}
-\vspace{1pt}
-\end{minipage}
-
-\begin{minipage}{.65\linewidth}
-     \textbf{Certifications}
- \end{minipage}
-  \begin{minipage}{.65\linewidth}
-     HackerRank Certifications
- \end{minipage}
- \begin{minipage}{.34\linewidth}
-    \raggedleft
-    November 2\textsuperscript{nd} - December 2\textsuperscript{nd}, 2023
-\end{minipage}
-
- \begin{minipage}{\linewidth}
- \vspace{10pt}
-\begin{itemize}
-    \item Certified by HackerRank for basic understanding of \href{https://www.hackerrank.com/certificates/fbcafb873c96}{\uline{Java}}, \href{https://www.hackerrank.com/certificates/4a8e6ae17626}{\uline{Python}} and \href{https://www.hackerrank.com/certificates/b4b9cb2f4e4a}{\uline{JavaScript}} languages, showcasing an established foundation and awareness of multiple languages
-\end{itemize}
-
- \vspace{1pt}
- \end{minipage}
-  \begin{minipage}{.65\linewidth}
-     Machine Learning Courses 
- \end{minipage}
- \begin{minipage}{.34\linewidth}
-     \flushright
-     October 22\textsuperscript{nd}, 2023
- \end{minipage}
- \begin{minipage}{\linewidth}
- \vspace{10pt}
- \begin{itemize}
-     \item Completed \href{https://www.kaggle.com/learn/certification/jeremyfriesen123/intro-to-machine-learning}{\textcolor{blue}{\uline{Intro to Machine Learning}}} and \href{https://www.kaggle.com/learn/certification/jeremyfriesen123/intermediate-machine-learning}{\textcolor{blue}{\uline{Intermediate Machine Learning}}} courses by Kaggle, serving as an early stepping stone to the integration of A.I. in future projects
+%
+%-----------Technical Skills-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, SQL (PostgreSQL), TypeScript, JavaScript, Java} \\
+     \textbf{Frameworks \& Libraries}{: Drizzle ORM, Node.js, Next.js, TailwindCSS, React, Shadcn/ui} \\
+     \textbf{Data \& Visualization}{: Pandas, GeoPandas, Matplotlib, Seaborn, Folium, Mermaid, Recharts} \\
+     \textbf{Testing \& Documentation}{: Playwright, Jest, Fumadocs, MDX} \\
+     \textbf{Developer Tools}{: Git, Jupyter Notebooks, VS Code, PyCharm, IntelliJ} \\
+    }}
  \end{itemize}
- \vspace{1pt}
- \end{minipage}
-
- \begin{minipage}{.65\linewidth}
-     \textbf{Clubs}
- \end{minipage}
-
-\begin{minipage}{.65\linewidth}
-    cuHacking
-\end{minipage}%
-\begin{minipage}{.34\linewidth}
-    \flushright
-    July 2024
-\end{minipage}
 
 
-\begin{minipage}{\linewidth}
- \vspace{10pt}
- \begin{itemize}
-     \item Member of Carleton University's Hackathon Development Team, demonstrating a strong interest in exploring the field of study beyond the classroom
- \end{itemize}
- \vspace{1pt}
- \end{minipage}
-
+%-------------------------------------------
 \end{document}

@@ -1,6 +1,6 @@
 %-------------------------
 % Resume in Latex
-% Author : Jeremy Friesen
+% Author : Jake Gutierrez
 % Based off of: https://github.com/sb2nov/resume
 % License : MIT
 %------------------------
@@ -115,6 +115,22 @@
     GitHub: \href{https://github.com/JeremyFriesenGitHub}{\textcolor{blue}{\underline{JeremyFriesenGitHub}}}
 \end{center}
 
+%-----------BASIC PROFILE-----------
+
+\section{Basic Profile}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Security Clearances}{: Secret (Level II), Enhanced Reliability Status (Level I)} \\
+     \textbf{Language Proficiency}{: English (native), French (native)}  \\
+     
+     \textbf{Certifications}{: \href{https://www.hackerrank.com/certificates/4a8e6ae17626}{\textcolor{blue}{\underline{Python (basic)}}}, 
+     \href{https://www.hackerrank.com/certificates/b4b9cb2f4e4a}{\textcolor{blue}{\underline{JavaScript (basic)}}}, 
+     \href{https://www.hackerrank.com/certificates/fbcafb873c96}{\textcolor{blue}{\underline{Java (basic)}}}, 
+     \href{https://www.kaggle.com/learn/certification/jeremyfriesen123/intro-to-machine-learning}{\textcolor{blue}{\underline{Intro to Machine Learning}}}
+     }      
+    }}
+ \end{itemize}
+
 
 
 %-----------EDUCATION-----------
@@ -125,16 +141,22 @@
       {Bachelor of Computer Science, Honours - Co-op option}{Sept. 2022  -- May 2027}
     \resumeItemListStart
         \resumeItem{Artificial Intelligence and Machine Learning Stream}
-        \resumeItem{GPA 3.59/4 (letter grade of B+)}
+        \resumeItem{CGPA 10.11/12 (letter grade of A-)}
+        \resumeItem{Available for 4 months beginning May 2025}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------AVAILABILITY-----------
-\section{Availability}
- \resumeSubHeadingListStart
-    \item Available for 4 months beginning May 2025
-  \resumeSubHeadingListEnd
-
+  %-----------Technical Skills-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, SQL (PostgreSQL), TypeScript, JavaScript, Java} \\
+     \textbf{Frameworks \& Libraries}{: Drizzle ORM, Node.js, Next.js, TailwindCSS, React, Shadcn/ui} \\
+     \textbf{Data \& Visualization}{: Pandas, GeoPandas, Matplotlib, Seaborn, Folium, Mermaid, Recharts} \\
+     \textbf{Testing \& Documentation}{: Playwright, Fumadocs, MDX} \\
+     \textbf{Developer Tools}{: Git, Jupyter Notebooks, VS Code, PyCharm, IntelliJ} \\
+    }}
+ \end{itemize}
 
 %-----------EXPERIENCE-----------
 \section{Experience}
@@ -156,17 +178,15 @@
       {Royal Canadian Mounted Police}{Ottawa, ON}
       \resumeItemListStart
        \resumeItem{Worked as an IT-01 \textbf{Technical Analyst} for the RCMP's \textbf{Central Help Desk} as a first point of contact for technical problems and requests through the call center phone system as well as the self-service ticketing system}
-       \resumeItem{Provided first level support for \textbf{200+ applications}}
-       \resumeItem{Used \textbf{troubleshooting} methodology in order to better understand the issues at hand}
+       \resumeItem{Provided first level support for \textbf{200+ applications} by using \textbf{troubleshooting} methodology in order to better understand the issues at hand for clients}
        \resumeItemListEnd
 %-----------NRC-----------
     \resumeSubheading
       {Data Scientist for Complex Systems}{May 2024 -- Aug. 2024}
       {National Research Council of Canada}{Ottawa, ON}
       \resumeItemListStart
-         \resumeItem{Contributed to the \textbf{AI for Logistics Program} and \textbf{Digital Technologies Research Centre}, with emphasis on transportation, warehousing, infrastructure, and AI-driven modeling}
-    \resumeItem{Analyzed complex sensor and historical datasets (geospatial, tabular, specification) to streamline data clarity and structure}
-    \resumeItem{Utilized \textbf{Python} libraries (\textbf{GeoPandas}, \textbf{Folium}, \textbf{Pandas}, \textbf{Matplotlib}, \textbf{NumPy}, \textbf{Seaborn}) for annotations, visualizations, optimizations, and trend analyses}
+         \resumeItem{Advanced the \textbf{AI for Logistics Program} and \textbf{Digital Technologies Research Centre}, with emphasis on transportation, warehousing, infrastructure, and AI-driven modeling}
+    \resumeItem{Analyzed complex sensor and historical datasets (geospatial, tabular, specification), leveraging \textbf{Python} libraries (\textbf{GeoPandas}, \textbf{Folium}, \textbf{Pandas}, \textbf{Matplotlib}, \textbf{NumPy}, \textbf{Seaborn}) to streamline data clarity and structure}
   \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -177,33 +197,21 @@
       \resumeProjectHeading
       {\textbf{cuHacking} $|$ \emph{Core Development Team Organizer}}{Aug.  2024 -- Dec. 2024}
           \resumeItemListStart
-           \resumeItem{Helped design backend architecture for user profiles using \textbf{Postgres} with \textbf{Drizzle ORM} and created ER diagrams with \textbf{Mermaid charts}}
+           \resumeItem{Designed backend architecture for user profiles with \textbf{Postgres}, \textbf{Drizzle ORM}, and \textbf{Mermaid} ER diagrams}
+          
           \resumeItem{Created pages for the documentation site using \textbf{Fumadocs} and \textbf{MDX}, enhancing project organization and showcasing guidelines, standards, and knowledge base for the organization}
+          
           \resumeItem{Wrote end-to-end tests for the docs site with \textbf{Playwright}, demonstrating strong testing skills}
-          \resumeItem{Integrated an \textbf{AI-powered pull request reviewer} to streamline team PR reviews, supporting the internal development workflow}
+          
+          \resumeItem{Integrated an \textbf{AI-powered PR reviewer} to enhance team reviews and internal workflows}
           \resumeItemListEnd
       \resumeProjectHeading
           {\textbf{Statsbomb DBMS} $|$ \emph{Python, PostgreSQL, Psycopg, JSON, Git}}{March 2024 -- April 2024}
           \resumeItemListStart
-            \resumeItem{Developed a Database Management System in \textbf{PostgreSQL} for the Open-Source Statsbomb repository to store and query historical \textbf{JSON} soccer data, utilizing Normalization Theory techniques, ER diagrams and Schema diagrams to correctly store all attributes across tables}
-            \resumeItem{Developed loaders in \textbf{Python} using the \textbf{Psycopg} library to efficiently load \textbf{JSON} data into the \textbf{PostgreSQL} Database and created efficient \textbf{SQL} queries, demonstrating strong technical knowledge}
+            \resumeItem{Developed a Database Management System in \textbf{PostgreSQL} for the Open-Source Statsbomb repository to store and query historical soccer data, utilizing Normalization Theory techniques, ER diagrams and Schema diagrams to correctly store all attributes across tables}
+            \resumeItem{Developed loaders in \textbf{Python} using the \textbf{Psycopg} library to efficiently load \textbf{JSON} data into the \textbf{PostgreSQL} database and created efficient \textbf{SQL} queries, demonstrating strong technical knowledge}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
-
-
-
-%
-%-----------Technical Skills-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Languages}{: Python, SQL (PostgreSQL), TypeScript, JavaScript, Java} \\
-     \textbf{Frameworks \& Libraries}{: Drizzle ORM, Node.js, Next.js, TailwindCSS, React, Shadcn/ui} \\
-     \textbf{Data \& Visualization}{: Pandas, GeoPandas, Matplotlib, Seaborn, Folium, Mermaid, Recharts} \\
-     \textbf{Testing \& Documentation}{: Playwright, Fumadocs, MDX} \\
-     \textbf{Developer Tools}{: Git, Jupyter Notebooks, VS Code, PyCharm, IntelliJ} \\
-    }}
- \end{itemize}
 
 
 %-------------------------------------------

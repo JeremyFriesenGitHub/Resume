@@ -1,0 +1,241 @@
+%-------------------------
+% Resume in Latex
+% Author : Jeremy Friesen
+% Inspired by: https://github.com/sb2nov/resume and https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING---------- TO FIX
+
+\begin{center}
+    \textbf{\Huge \scshape Jeremy Friesen} \\ \vspace{5pt}
+    \small +1 (343) 575-8441 $|$ 
+    \href{mailto:jeremyfriesen@cmail.carleton.ca}{\textcolor{blue}{\underline{jeremyfriesen@cmail.carleton.ca}}} $|$ 
+    % LinkedIn: \href{https://linkedin.com/in/jeremyfriesen1}{\textcolor{blue}{\underline{jeremyfriesen1}}} $|$ 
+    GitHub: \href{https://github.com/JeremyFriesenGitHub}{\textcolor{blue}{\underline{JeremyFriesenGitHub}}}  $|$ 
+    Website: \href{https://jeremy-friesen.com}{\textcolor{blue}{\underline{jeremy-friesen.com}}}
+    % $|$ 
+    % LinkedIn: \href{https://ca.linkedin.com/in/jeremyfriesen1}{\textcolor{blue}{\underline{JeremyFriesen1}}}
+    %   $|$ 
+    % DevPost: \href{https://devpost.com/JeremyFriesenGitHub}{\textcolor{blue}{\underline{JeremyFriesenGitHub}}}
+\end{center}
+
+%-----------BASIC PROFILE----------- TO FIX
+
+\section{Basic Profile}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Security Clearances}{: Secret (Level II), Enhanced Reliability Status (Level I)} \\
+    \textbf{Language Proficiency}{: English (native), French (native)} \\
+     \textbf{Certifications}{:
+    \href{https://learn.microsoft.com/api/credentials/share/en-us/JeremyFriesen-3056/7578B454E676563E?sharingId=8B36EC9151BBF3F1}{\textcolor{blue}{\underline{Azure Fundamentals (Microsoft)}},}
+    \href{https://www.credly.com/badges/aab96fc1-decd-4a72-a4af-bc3a9bd72279/public_url}{\textcolor{blue}{\underline{GitHub Foundations (GitHub)}},} 
+    \href{https://www.kaggle.com/learn/certification/jeremyfriesen123/intro-to-machine-learning}{\textcolor{blue}{\underline{Intro to Machine Learning (Kaggle)}}}
+     } \\
+     % \textbf{Hackathons}{: 2x Hackathon winner}
+    }}
+ \end{itemize}
+
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Carleton University}{Ottawa, ON}
+      {Bachelor of Computer Science, Honours - Co-op option}{Sept. 2022  -- May 2027}
+    \resumeItemListStart
+        \resumeItem{Artificial Intelligence and Machine Learning Stream}
+        \resumeItem{CGPA 10.11/12 (letter grade of A-)}
+        \resumeItem{Available for 4 months beginning May 2026}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+  %-----------Technical Skills-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+    \textbf{Languages}{: Python, TypeScript, JavaScript, SQL (PostgreSQL), Java, HTML/CSS} \\
+     \textbf{Frameworks}{: Next.js, TailwindCSS, Node.js, Express.js, Flask} \\
+     \textbf{Libraries}{: React, Pandas/GeoPandas, Matplotlib, Seaborn, Folium, Playwright, Scikit-learn} \\
+     \textbf{Cloud \& DevOps}{: Azure, Netlify, Docker, GitHub Actions, Terraform} \\
+     \textbf{Developer Tools}{: Git, Jupyter Notebooks, VS Code, PyCharm, IntelliJ, Eclipse, Figma} }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+
+  %-----------FINANCE-----------
+    \resumeSubheading
+      {Service Desk Technician}{May 2025 -- Aug. 2025}
+      {Finance Canada}{Ottawa, ON}
+      \resumeItemListStart
+       \resumeItem{Starting new position for Summer 2025 Co-op}
+       \resumeItemListEnd
+  
+%-----------PSC-----------
+    \resumeSubheading
+      {Analyst}{Jan. 2025 -- Apr. 2025}
+      {Public Safety Canada}{Ottawa, ON}
+      \resumeItemListStart 
+        
+        \resumeItem{Designed and created scalable \textbf{cloud architecture} and \textbf{IT infrastructure} within \textbf{Azure} to support secure internal remote network access, showing advanced knowledge of \textbf{networking} and \textbf{cloud computing} concepts}
+        
+        \resumeItem{Automated tasks as an Azure administrator using \textbf{PowerShell} scripting, \textbf{DevOps} and \textbf{Agile} techniques, boosting team productivity and standardizing \textbf{CI/CD} workflows}
+       
+      \resumeItemListEnd
+
+%-----------RMCP-----------
+    \resumeSubheading
+      {Level 1 Analyst}{Sept. 2024 -- Dec. 2024}
+      {Royal Canadian Mounted Police}{Ottawa, ON}
+      \resumeItemListStart
+       
+       \resumeItem{Worked as an IT-01 \textbf{Technical Analyst} for the RCMP's \textbf{Central Help Desk} as a first point of contact for technical problems and requests through the call center phone system as well as the self-service ticketing system}
+       
+       \resumeItem{Provided first level support for \textbf{200+ applications} by using \textbf{troubleshooting} methodology in order to better understand the issues at hand for clients}
+       
+       \resumeItemListEnd
+%-----------NRC-----------
+    \resumeSubheading
+      {Data Scientist for Complex Systems}{May 2024 -- Aug. 2024}
+      {National Research Council of Canada}{Ottawa, ON}
+      \resumeItemListStart
+         
+         \resumeItem{Advanced the \textbf{AI for Logistics Program} and \textbf{Digital Technologies Research Centre}, with emphasis on transportation, warehousing, infrastructure, and AI-driven modeling}
+    
+    \resumeItem{Utilized \textbf{Python} libraries such as \textbf{Matplotlib}, \textbf{GeoPandas} and \textbf{Folium} to analyze over \textbf{200+ sensor and historical datasets} and enhancing data clarity and structure across \textbf{300+ pages} of documentation}
+  
+  \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------VOLS----------- 
+\section{Volunteering}
+    \resumeSubHeadingListStart
+
+    % \resumeProjectHeading
+    %   {\textbf{Science Student Success Centre} $|$ \emph{Computer Science and Career Mentor}}{May 2025 -- Present}
+    %       \resumeItemListStart
+    %        \resumeItem{Starting new mentor position for the next academic year}
+    %       \resumeItemListEnd
+          
+      \resumeProjectHeading
+      {\textbf{cuHacking} $|$ \emph{Coordinator}}{Aug. 2024 -- Dec. 2024}
+          \resumeItemListStart
+
+          
+           % \resumeItem{Designed backend architecture for user profiles with \textbf{Postgres}, \textbf{Drizzle ORM} and \textbf{Mermaid} ER diagrams}
+          
+          \resumeItem{Worked as a Coordinator on the Development Team and created comprehensive documentation and end-to-end tests using \textbf{Playwright} and \textbf{Markdown}, enhancing project organization and setting knowledge base standards}
+          
+          \resumeItem{Integrated CodeRabbit (an \textbf{AI pull request reviewer}) to help enhance code reviews and \textbf{CI/CD} workflows, showing strong \textbf{DevOps} techniques and initiatives}
+          
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
